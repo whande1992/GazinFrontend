@@ -1,6 +1,10 @@
 {
   "name": "frontend",
   "version": "0.0.0",
+  "engines": {
+    "npm": "16.18.0",
+    "node": "8.19.2"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
