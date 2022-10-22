@@ -78,8 +78,8 @@
 
         <div class="col-12">
           <a v-if="developerStore.developer.id" class="btn btn-primary" type="submit"
-             v-on:click="this.updateDeveloper()">Atualizar</a>
-          <a v-else class="btn btn-primary" type="submit" v-on:click="this.createDeveloper()">Criar novo</a>
+             v-on:click="updateDeveloper()">Atualizar</a>
+          <a v-else class="btn btn-primary" type="submit" v-on:click="createDeveloper()">Criar novo</a>
         </div>
       </form>
 
@@ -119,7 +119,7 @@ function createDeveloper() {
   new Promise((resolve, reject) => {
     resolve(developerStore.createDeveloper())
   }).then(res => {
-
+      console.log(res)
     if (res.status === 201) {
       getDeveloperById(res.data.data.id)
       const title = `Sucesso ;)`;
@@ -127,11 +127,12 @@ function createDeveloper() {
       showMessage(title, message)
       reset()
     } else {
-      stateLocalDeveloper.error = res.data
+      stateLocalDeveloper.error = res.data.data
     }
   }).catch(error => {
+    console.log(error)
     stateLocalDeveloper.error = error.response.data
-    console.log(error.response)
+   // console.log(error.response)
   })
 }
 

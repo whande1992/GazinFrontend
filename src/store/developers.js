@@ -82,6 +82,7 @@ export const useDeveloperStore = defineStore('developers', {
 
         createDeveloper() {
             return api.post('developers', this.developer).then(res => {
+                console.log(res)
                 if(res.status === 201) {
                     this.developer.id = res.data.data.id
                     this.fetchDevelopers()
@@ -90,8 +91,7 @@ export const useDeveloperStore = defineStore('developers', {
 
             }).catch(error => {
                 console.log('Creating developer')
-                console.log(error)
-                /*return error.response.data*/
+                return error.response
             })
         },
 

@@ -44,7 +44,7 @@ export default function createLevel() {
         return api.post('levels', {
             'level': level
         }).then(res => {
-            console.log(res.data.data.id)
+            console.log(res.data.data)
             if (res.status === 201) {
 
                 new Promise((resolve, reject) => {
