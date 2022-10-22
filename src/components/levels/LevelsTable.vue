@@ -7,7 +7,7 @@
       <p class="card-text">Confira os níveis cadastrados, atualize, exclua ou adicione um novo</p>
       <div class="bd-example">
         <table class="table table-sm">
-          <caption>{{ this.levelStore.meta.total }} Níveis</caption>
+          <caption>{{ levelStore.meta.total }} Níveis</caption>
           <thead>
           <tr>
             <th scope="row">#</th>
@@ -17,7 +17,7 @@
           </tr>
           </thead>
           <tbody>
-          <template v-for="level in this.levelStore.levels">
+          <template v-for="level in levelStore.levels">
             <tr v-on:dblclick="optionActiondeveloper(level.id)">
               <th scope="row">{{ level.id }}</th>
               <td> {{ level.level }}</td>
@@ -30,15 +30,15 @@
 
         <nav aria-label="...">
           <ul class="pagination">
-            <template v-for="link in this.levelStore.meta.links">
+            <template v-for="link in levelStore.meta.links">
 
               <li v-if="link.url" :class="{active : link.active}" aria-current="page" class="page-item ">
-                <a class="page-link" v-on:click="this.getLevels(link.url)">{{ link.label }}</a>
+                <a class="page-link" v-on:click="getLevels(link.url)">{{ link.label }}</a>
               </li>
 
               <li v-else class="page-item disabled  ">
                 <a aria-disabled="true" class="page-link" tabindex="-1"
-                   v-on:click="this.getLevels(link.url)">{{ link.label }}</a>
+                   v-on:click="getLevels(link.url)">{{ link.label }}</a>
               </li>
             </template>
 
