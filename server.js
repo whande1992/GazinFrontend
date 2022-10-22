@@ -1,6 +1,6 @@
 const express = require('express')
 const { resolve } = require('path')
-const app = express
+const app = express()
 
 
 app.use('/' ,
@@ -12,9 +12,10 @@ app.use('/' ,
     )
 )
 
-app.listen(process.env.PORT || 3000, (app) => {
+app.listen(process.env.PORT || 3000, (err) => {
     if(err) {
         return console.log(err)
 
         console.log('tudo funcionando certinho ')
-    }})
+    }
+})
