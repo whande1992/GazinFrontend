@@ -1,1 +1,1 @@
-web: npm run test:e2e:ci
+web: npm run preview
