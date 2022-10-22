@@ -1,43 +1,48 @@
-# frontend
+# GazinTech Frontend Developers
 
-This template should help get you started developing with Vue 3 in Vite.
+#API Developer (Froontend)
 
-## Recommended IDE Setup
+Projeto realizado com intuito de avaliação tecnica, o propósito do teste é analisar boas práticas, lógica de programação, reaproveitamento de código e conhecimento geral das tecnologias escolhidas e utilizadas.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Tecnologia
 
-## Customize configuration
+[Vuejs] - Uma estrutura acessível, de alto desempenho e versátil para a construção de interfaces de usuário da web.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+[Node] Version 16.18.0 (LTS)
 
-## Project Setup
+[Vite](https://vitejs.dev/) Ferramentas de front-end de próxima geração
+
+
+
+## Install
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar para versão dev
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compilar para produção
 
 ```sh
 npm run build
 ```
 
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
 
-```sh
-npm run test:unit # or `npm run test:unit:ci` for headless testing
+###Configuração
+Modificar a URL de consumo da API 
+```
+src/services/api/js 
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
+Modificar a URL de consumo da API (URL remota)
 ```
+https://whande1developerbackend.herokuapp.com/api/v1/
+```
+
+
 # GazinFrontend
