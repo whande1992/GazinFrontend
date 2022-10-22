@@ -7,7 +7,7 @@
       <p class="card-text">Confira os níveis cadastrados, atualize, exclua ou adicione um novo</p>
       <div class="bd-example">
         <table class="table table-sm">
-          <caption>{{ levelStore.meta.total }} Níveis</caption>
+          <caption>{{ this.levelStore.meta.total }} Níveis</caption>
           <thead>
           <tr>
             <th scope="row">#</th>
@@ -17,7 +17,7 @@
           </tr>
           </thead>
           <tbody>
-          <template v-for="level in levelStore.levels">
+          <template v-for="level in this.levelStore.levels">
             <tr v-on:dblclick="optionActiondeveloper(level.id)">
               <th scope="row">{{ level.id }}</th>
               <td> {{ level.level }}</td>
