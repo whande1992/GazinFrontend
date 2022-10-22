@@ -1,4 +1,5 @@
 # GazinTech Frontend Developers
+Heroku: https://gazinfrontend.herokuapp.com/
 
 #API Developer (Froontend)
 
