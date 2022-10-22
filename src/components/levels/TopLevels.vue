@@ -44,8 +44,8 @@
 
 <script >
 
-import { useDeveloperStore } from '../../store/developers'
-import { useLevelStore } from '../../store/levels'
+import { useDeveloperStore } from '../../store/developers.js'
+import { useLevelStore } from '../../store/levels.js'
 import { onMounted } from 'vue'
 
 export default {
